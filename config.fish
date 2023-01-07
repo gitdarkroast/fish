@@ -19,7 +19,20 @@ set __fish_git_prompt_char_stashstate '↩'
 set __fish_git_prompt_char_upstream_ahead '+'
 set __fish_git_prompt_char_upstream_behind -
 
-set fish_greeting  ""
+set fish_greeting ""
 
-source ~/.config/.iterm2_shell_integration.fish
+# Aliases
+alias cp="cp -v"
+alias mv="mv -v"
+alias ls="exa"
+alias ll="exa --long --header --all"
+alias lg="exa --long --header --all --git"
+alias tree="exa --tree --level=3"
+alias cat="bat --theme=gruvbox-dark"
+
+
+# Env variables
+set -Ux EDITOR "nvim"
+
+
 starship init fish | source
